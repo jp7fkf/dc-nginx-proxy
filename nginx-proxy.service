@@ -6,7 +6,7 @@ Requires=docker.service
 User=root
 Type=simple
 
-Environment=COMPOSE_FILE=/home/composer/nginx-proxy/docker-compose.yml
+Environment=COMPOSE_FILE=/home/composer/dc-nginx-proxy/docker-compose.yml
 
 ExecStartPre=/usr/bin/docker-compose -f ${COMPOSE_FILE} kill
 ExecStartPre=/usr/bin/docker-compose -f ${COMPOSE_FILE} rm -v -f
